@@ -1,0 +1,85 @@
+body {
+    background-image: url('img/bbg9.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 20vh;  
+    margin: 0; 
+    padding: 0;  
+}
+h1{
+    text-align: center;
+    font-family: sans-serif;
+    color: black;
+}
+#main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+}
+
+.divs {
+    /* border: 2px solid white; */
+    width: 45%;
+    max-width: 200px;
+    padding: 20px;
+    margin: 10px;
+    text-align: center;
+    color: black;
+}
+
+p {
+    font-family: sans-serif;
+    font-size: 32px; /* Converted from 6vw */
+}
+
+span {
+    font-family: sans-serif;
+    font-size: 16px; /* Converted from 3vw */
+}
+
+/* Media Queries for different screen sizes */
+@media (max-width: 768px) {
+    .divs {
+        width: 100%; /* Full width on small screens */
+        margin: 5px 0;
+    }
+
+    p {
+        font-size: 40px; /* Converted from 8vw */
+    }
+
+    span {
+        font-size: 20px; /* Converted from 4vw */
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .divs {
+        width: 48%;
+    }
+
+    p {
+        font-size: 25px; /* Converted from 5vw */
+    }
+
+    span {
+        font-size: 12px; /* Converted from 2.5vw */
+    }
+}
+
+@media (min-width: 1025px) {
+    .divs {
+        width: 200px; /* Fixed width for larger screens */
+    }
+
+    p {
+        font-size: 32pt;
+    }
+
+    span {
+        font-size: 18pt;
+    }
+}

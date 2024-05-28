@@ -1,0 +1,26 @@
+let days = document.getElementById("days")
+let hours = document.getElementById("hours")
+let min = document.getElementById("min")
+let sec = document.getElementById("sec")
+function countDown() {
+    let endDate = new Date("17 June 2024")
+    let startDate = new Date()
+    let result = endDate - startDate
+
+    // Counting Days
+    let days_1 = Math.floor(result / 1000 / 60 / 60 / 24)
+    // Counting hours
+    let hour = Math.floor(result / 1000 / 60 / 60 ) % 24
+    // Counting min
+    let minutes = Math.floor(result / 1000 / 60  ) % 60
+    // Counting sec
+    let second = Math.floor(result / 1000   ) % 60
+
+    days.innerText = days_1 
+    hours.innerText = hour
+    min.innerText = minutes
+    sec.innerText = second
+}
+
+countDown()
+setInterval(countDown,1000)
