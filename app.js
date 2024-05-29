@@ -20,6 +20,19 @@ function countDown() {
     hours.innerText = hour
     min.innerText = minutes
     sec.innerText = second
+    
+    if (days.innerText < 0) {
+        days.innerText = 0
+    }
+    else if (hours.innerText < 0 ){
+        hours.innerText = 0
+    }
+    else if (min.innerText < 0 ){
+        min.innerText = 0
+    }
+    else if (sec.innerText < 0 ){
+        min.innerText = 0
+    }
 }
 
 countDown()

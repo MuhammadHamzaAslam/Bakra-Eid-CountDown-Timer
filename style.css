@@ -1,17 +1,22 @@
 body {
-    background-image: url('img/bbg9.jpg');
+    background-image: url('img/bg8.jpg');
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    height: 20vh;  
+    height: 100vh !important;  
     margin: 0; 
     padding: 0;  
 }
-h1{
+
+h1 {
     text-align: center;
     font-family: sans-serif;
-    color: black;
+    color: white;
+    font-weight: 600;
+    margin-top: 20px;
+    padding-top: 20px;
 }
+
 #main {
     display: flex;
     flex-wrap: wrap;
@@ -21,38 +26,95 @@ h1{
 }
 
 .divs {
-    /* border: 2px solid white; */
-    width: 45%;
-    max-width: 200px;
-    padding: 20px;
-    margin: 10px;
-    text-align: center;
-    color: black;
+    /* width: 220px; */
+    margin-left: 20px;
+    border: none;
+    outline: none;
+    color: #fff;
+    /* background: #111; */
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
+
+.divs:before {
+    content: '';
+    background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+    position: absolute;
+    top: -2px;
+    left:-2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing 20s linear infinite;
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
+    border-radius: 10px;
+}
+
+.divs:active {
+    color: #000;
+}
+
+.divs:active:after {
+    background: transparent;
+}
+
+.divs:hover:before {
+    opacity: 1;
+}
+
+.divs:after {
+    z-index: -1;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #111;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+}
+
+
 
 p {
     font-family: sans-serif;
-    font-size: 32px; /* Converted from 6vw */
+    font-size: 32px; 
 }
 
 span {
     font-family: sans-serif;
-    font-size: 16px; /* Converted from 3vw */
+    font-size: 16px; 
+    padding-bottom: 20px;
+}
+
+@keyframes glowing {
+    0% { background-position: 0 0; }
+    50% { background-position: 400% 0; }
+    100% { background-position: 0 0; }
 }
 
 /* Media Queries for different screen sizes */
 @media (max-width: 768px) {
     .divs {
-        width: 100%; /* Full width on small screens */
+        width: 100%; 
         margin: 5px 0;
     }
 
     p {
-        font-size: 40px; /* Converted from 8vw */
+        font-size: 40px; 
     }
 
     span {
-        font-size: 20px; /* Converted from 4vw */
+        font-size: 20px;
     }
 }
 
@@ -62,17 +124,17 @@ span {
     }
 
     p {
-        font-size: 25px; /* Converted from 5vw */
+        font-size: 25px;
     }
 
     span {
-        font-size: 12px; /* Converted from 2.5vw */
+        font-size: 12px; 
     }
 }
 
 @media (min-width: 1025px) {
     .divs {
-        width: 200px; /* Fixed width for larger screens */
+        width: 200px; 
     }
 
     p {
